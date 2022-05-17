@@ -1,0 +1,65 @@
+Step 1: Whenever the Developer merge the source code to main branch jenkins pipeline should trigger (GitHub)
+
+Step 2: In jenkins, 
+	- Clone the repository to agent (Windows)
+	- Build the Twincat Application
+	- if build fails send the notification to Developer team
+	- if the build success perform the Static code analysis (cobertura)
+
+Step 3: Once Static code analysis is completed send the results to specific team
+
+---------------------------------------------------------------------------------------------------------------
+GitHub: github.com
+Username – sourav_sircar@taaltech.com
+Password – TaalTech@12345
+PAT - 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
+
+
+Jenkins URL:http://13.94.114.94:8080/login?
+Second user: hainzl_jk
+pwd: Hainzl@#123!
+jenkins token - 114941d9ed02b80b850be8fa147591a211
+
+
+Agent Server Details:
+Ip address: 13.70.202.22
+username: hainzl_staut
+Password:his7892!Hainzl1!
+
+Name of the Repositories:
+1. HIS_IO_LIB-Source - start
+2. HIS_SP_LIB-Source
+3. HIS_UTIL_LIB-Source
+4. HIS_HWI_LIB-Source
+5. HIS_IO_LIB-SampleProject
+
+
+
+C:\Users\hainzl_JKSlave\workspace\Test-Repo06052022@2
+
+Requirements for the integration into Visual Studio
+• Full version of Visual Studio 2013-19
+or
+• Visual Studio Shell 2013-2019
+but
+• not Visual Studio Express
+
+start "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe" "C:\Users\hainzl_staut\Documents\TwinCAT Project2\TwinCAT Project2.sln"
+
+"C:\TwinCAT\3.1\Components\Plc\Common\RepTool.exe" --profile="TwinCAT PLC Control_Build_4024.17" --installLibsRecurs 
+"C:\Users\hainzl_staut\Documents\TwinCAT Project2\TwinCAT Project2\CSVExample\_Libraries\"
+
+Exception has been thrown by the target of an invocation.
+
+
+start /wait "" "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe" AI_Library.sln /Rebuild "Debug|TwinCAT RT (x86)" /Out logfile.log
+
+start /wait "" "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe" "C:\Users\hainzl_staut\Desktop\Extracted files\AI_Library.sln" /Project "C:\Users\hainzl_staut\Desktop\Extracted files\AI_Library\AI_Library.csproj" /Rebuild "Debug|TwinCAT RT (x86)" /Out logfile.log
+
+C:\Program Files (x86)\TcUnit-Runner\LaunchTcUnit.bat -a 127.0.0.1.1.1
+
+start "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe" "C:\Users\hainzl_staut\Documents\TwinCAT Project2\TwinCAT Project2.sln" >nul 2>&1
+call sendkeys.bat "Some Title" "OK"
+
+C:\TwinCAT\3.1\Components\Plc\Common>RepTool.exe --profile="TwinCAT PLC Control_Build_4024.17" --installLibsRecurs "C:\Users\hainzl_staut\Documents\TwinCAT Project2\TwinCAT Project2\CSVExample\_Libraries\"
+
